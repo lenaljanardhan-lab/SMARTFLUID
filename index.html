@@ -144,35 +144,33 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 14px 28px;
+            padding: 16px 32px;
             font-family: var(--font-heading);
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 700;
             letter-spacing: 1px;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
-            transition: background 0.2s;
             text-transform: uppercase;
         }
 
         .btn-red {
-            background: var(--accent-blue);
+            background: var(--accent-red);
             color: #fff;
         }
 
         .btn-red:hover {
-            background: #0b3d91;
+            background: #cc0000;
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--accent-blue);
-            color: var(--accent-blue);
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
         }
 
         .btn-outline:hover {
-            background: var(--accent-blue);
+            background: var(--text-main);
             color: #fff;
         }
 
@@ -258,10 +256,10 @@
 
         /* Hero */
         .hero {
-            padding: 220px 0 140px;
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1579802092285-b903cf9a2ea9?q=80&w=2670&auto=format&fit=crop') center/cover no-repeat;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
+            padding: 180px 0 120px;
+            background-color: var(--text-main);
+            /* Dark Slate Grey, non-decorative */
+            border-bottom: 1px solid var(--accent-blue);
         }
 
         .hero-label {
@@ -312,19 +310,15 @@
             align-items: center;
         }
 
-        /* Services & Products */
+        /* Functional Cards */
         .service-card {
             background: var(--bg-panel);
             border: 1px solid var(--border-color);
-            padding: 35px;
-            border-radius: 8px;
-            transition: all 0.3s;
+            padding: 40px;
         }
 
         .service-card:hover {
             border-color: var(--accent-blue);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            transform: translateY(-3px);
         }
 
         .service-icon {
@@ -348,40 +342,19 @@
         .product-card {
             background: var(--bg-panel);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
+            padding: 30px;
         }
 
-        .product-card:hover {
-            border-color: var(--accent-blue);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            transform: translateY(-3px);
-        }
-
-        .product-card-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .product-card-content {
-            padding: 25px;
-            flex: 1;
-        }
-
-        .product-card-content h4 {
+        .product-card h4 {
             font-size: 18px;
             margin-bottom: 10px;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--text-main);
         }
 
-        .product-card-content p {
+        .product-card p {
             color: var(--text-muted);
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.6;
             margin: 0;
         }
@@ -583,7 +556,6 @@
             color: var(--text-main);
             font-family: var(--font-body);
             font-size: 15px;
-            border-radius: 4px;
         }
 
         .contact-form input:focus,
@@ -669,14 +641,13 @@
 
     <header class="hero">
         <div class="container">
-            <div class="hero-label"><i class="fa-solid fa-triangle-exclamation"></i> Emergency Hose Repair Active
-            </div>
-            <h1>COMPLETE HYDRAULIC &<br><span>INDUSTRIAL HOSE SOLUTIONS</span><br>FOR CRITICAL INDUSTRIES</h1>
-            <p>Trusted Supplier of Certified Fluid Connector Products in Dubai Serving Oil & Gas, Marine, Rig,
-                Construction & Industrial Sectors.</p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-red"><i class="fa-solid fa-clipboard-list"></i> REQUEST A QUOTE</a>
-                <a href="tel:+971503723699" class="btn btn-outline"><i class="fa-solid fa-phone"></i> CONTACT SALES</a>
+            <h1 style="color: #ffffff;">24/7 HYDRAULIC &<br>INDUSTRIAL HOSE SOLUTIONS</h1>
+            <p style="color: #cccccc; max-width: 650px;">Direct supplier of certified fluid connector systems and
+                on-site fabrication for Oil & Gas, Marine, and heavy industrial sectors in Dubai.</p>
+            <div class="hero-actions" style="margin-top: 40px;">
+                <a href="#contact" class="btn btn-red">EMERGENCY DISPATCH</a>
+                <a href="tel:+971503723699" class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">+971
+                    50 372 3699</a>
             </div>
         </div>
     </header>
@@ -688,18 +659,17 @@
                     <h3 class="section-title">ABOUT SMART FLUID HYDRAULIC TRADING LLC</h3>
                     <div class="section-subtitle">Company Profile</div>
                 </div>
-                <p style="font-weight: 500; font-size: 18px; margin-bottom: 25px; color: var(--text-main);">It is our
-                    pleasure to introduce ourselves as a trusted trading company in Dubai, specialized in technical
-                    products & field services installation related to oil, gas, safety, marine, rig, food industry &
-                    construction industries.</p>
-                <p>Smart Fluid Hydraulic LLC Dubai was established recently with a vision to gain and build long-lasting
-                    & trusting business relationships with our clients to understand their requirements and supply the
-                    best quality products with the best prices to exceed their expectations.</p>
-                <p>We carry stock of a complete range of Flexible Hoses & Fittings, Industrial hose 1/4 '' size up to
-                    16'' size to meet all types of requirements from different industries. Our product ranges are
-                    highlighted here for your quick references, and we are also able to fabricate & supply custom-made
-                    Stainless Steel Fittings & accessories required for different industries. We offer a wide range of
-                    Fluid Connector Products manufactured by reputed companies around the world.</p>
+                <h2 style="font-size: 24px; color: var(--text-main); margin-bottom: 25px;">OPERATIONAL CAPABILITY</h2>
+                <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 20px;">Smart Fluid Hydraulic Trading
+                    LLC is a dedicated technical supplier and field service installer operating in Dubai. We specialize
+                    in critical fluid connectors, hydraulic systems, and pneumatic components for the Oil, Gas, Marine,
+                    Rig, and Heavy Construction industries.</p>
+                <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 20px;">Our facility maintains
+                    immediate dispatch capability for industrial hoses ranging from ¼” to 16” to meet precise technical
+                    specifications. We execute on-site tubing installations and fabricate custom stainless steel
+                    fittings to strict dimensional tolerances.</p>
+                <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 20px;">We supply authorized Fluid
+                    Connector Products manufactured by internationally compliant engineering firms.</p>
             </div>
             <div>
                 <div class="corporate-box">
@@ -729,136 +699,141 @@
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
-    <section id="products" class="section" style="background-color: var(--bg-panel);">
+    <!-- WHAT WE DO & PRODUCTS -->
+    <section id="products" class="section">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">Our Product Range</h3>
-                <div class="section-subtitle">High-Specification Components</div>
+                <h2 class="section-title">WHAT WE DO: INVENTORY & FABRICATION</h2>
+                <div class="section-subtitle">Stocked Components Ready For Dispatch</div>
             </div>
-            <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 16px;">We maintain ready stock of
-                industrial hoses ranging from ¼” to 16” sizes and a complete range of fluid connectors.</p>
             <div class="grid grid-3">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1627602325946-0b192c7d9a1a?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Hydraulic Hose">
-                    <div class="product-card-content">
-                        <h4>Hydraulic & Industrial Hoses</h4>
-                        <p>High-performance hoses suitable for high-pressure and heavy-duty applications. Sizes from ¼”
-                            to
-                            16”.</p>
-                    </div>
+                    <h4>High-Pressure Hoses</h4>
+                    <p>Hydraulic and industrial hoses suitable for heavy-duty applications. Sizes ranging from ¼” to
+                        16”.</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Stainless Steel Hoses">
-                    <div class="product-card-content">
-                        <h4>Stainless Steel & PTFE Hoses</h4>
-                        <p>Durable, corrosion and chemical-resistant solutions for critical environments and high-temp
-                            applications.</p>
-                    </div>
+                    <h4>Specialty Hoses</h4>
+                    <p>Stainless Steel and PTFE hoses for corrosive, chemical, and high-temperature environments.</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1610433722253-ab91283e382d?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Fittings and Valves">
-                    <div class="product-card-content">
-                        <h4>Fittings, Valves & Couplings</h4>
-                        <p>Compression tubes, high-pressure valves, and quick disconnect couplings engineered for
-                            safety.
-                        </p>
-                    </div>
+                    <h4>Fluid Connectors</h4>
+                    <p>Compression tubes, high-pressure valves, and quick disconnect couplings for extreme pressure.</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Pressure Accessories">
-                    <div class="product-card-content">
-                        <h4>Pressure Accessories</h4>
-                        <p>Accurate pressure gauges and monitoring solutions.</p>
-                    </div>
+                    <h4>Monitoring Equipment</h4>
+                    <p>Precision pressure gauges and calibrated monitoring accessories.</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1544837542-a7d187cf8fcb?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Flanges and Unions">
-                    <div class="product-card-content">
-                        <h4>Flanges & Unions</h4>
-                        <p>SAE Flanges, flange blocks, and heavy-duty hammer/tank unions.</p>
-                    </div>
+                    <h4>Heavy Unions</h4>
+                    <p>SAE Flanges, flange blocks, and heavy-duty hammer and tank unions.</p>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1620577551000-85f091c53245?q=80&w=800&auto=format&fit=crop"
-                        class="product-card-img" alt="Accessories">
-                    <div class="product-card-content">
-                        <h4>Accessories</h4>
-                        <p>Metallic expansion bellows and robust tube clamps (MS & SS).</p>
-                    </div>
+                    <h4>Hardware & Accessories</h4>
+                    <p>Metallic expansion bellows and robust tube clamps (MS & SS variants).</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- INDUSTRIES SECTION -->
-    <section id="industries" class="section">
+    <section id="industries" class="section" style="background-color: var(--bg-panel-light);">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">Industries We Serve</h3>
-                <div class="section-subtitle">Sector Applications</div>
+                <h2 class="section-title">INDUSTRIES SERVED</h2>
+                <div class="section-subtitle">Critical Infrastructure Deployments</div>
             </div>
-            <div class="grid grid-4">
-                <div class="industry-card">
-                    <i class="fa-solid fa-oil-well"></i>
-                    <h4>Oil & Gas</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-anchor"></i>
-                    <h4>Marine & Offshore</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-tower-observation"></i>
-                    <h4>Rig Operations</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-tractor"></i>
-                    <h4>Construction</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Safety Systems</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-utensils"></i>
-                    <h4>Food Industry</h4>
-                </div>
-                <div class="industry-card">
-                    <i class="fa-solid fa-industry"></i>
-                    <h4>Industrial Mfg</h4>
-                </div>
+            <div class="grid grid-4"
+                style="text-transform: uppercase; font-weight: 700; font-family: var(--font-heading); background: transparent;">
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Oil & Gas</div>
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Marine & Offshore</div>
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Rig Operations</div>
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Heavy Construction</div>
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Industrial Mfg</div>
+                <div style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px;">Safety Systems</div>
             </div>
         </div>
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="section" style="background-color: var(--bg-panel);">
+    <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">Our Services</h3>
+                <h2 class="section-title">FIELD SERVICES</h2>
                 <div class="section-subtitle">Technical Support & Fabrication</div>
             </div>
             <div class="grid grid-3">
                 <div class="service-card">
-                    <i class="fa-solid fa-truck-fast service-icon"></i>
-                    <h4>24x7 Emergency Services</h4>
-                    <p>We provide emergency and scheduled hose assembly services directly at site to reduce downtime.
+                    <h4 style="margin-bottom: 15px;">24/7 Mobile Dispatch</h4>
+                    <p>Emergency, on-site hose assembly and replacement services to eliminate prolonged equipment
+                        downtime.</p>
+                </div>
+                <div class="service-card">
+                    <h4 style="margin-bottom: 15px;">Tubing Installation</h4>
+                    <p>End-to-end structural installation of hydraulic and pneumatic tubing systems for mechanical
+                        plants.</p>
+                </div>
+                <div class="service-card">
+                    <h4 style="margin-bottom: 15px;">Custom Manufacturing</h4>
+                    <p>Precision turning and fabrication of specialized stainless steel fittings to meet highly specific
+                        dimensional tolerances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECORD OF CAPABILITY (PORTFOLIO) -->
+    <section class="section" style="background-color: var(--bg-panel-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">RECORD OF CAPABILITY</h2>
+                <div class="section-subtitle">Executed Operations Log</div>
+            </div>
+
+            <div class="grid grid-3">
+                <div style="background: var(--bg-panel); border: 1px solid var(--border-color); padding: 30px;">
+                    <div
+                        style="font-size: 12px; color: var(--text-muted); font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;">
+                        OPERATION: MARINE RETROFIT</div>
+                    <h4 style="font-size: 18px; margin-bottom: 15px; color: var(--text-main);">Vessel Hydraulic System
+                        Overhaul</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-muted);"><strong>Problem:</strong>
+                        Catastrophic failure of primary steering hydraulics on commercial cargo vessel during port
+                        layover.</p>
+                    <div
+                        style="border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 14px; color: var(--accent-blue); font-weight: 600;">
+                        Outcome: On-site fabrication and installation of 30+ high-pressure assemblies completed within
+                        14-hour window, preventing port departure delay.</div>
+                </div>
+
+                <div style="background: var(--bg-panel); border: 1px solid var(--border-color); padding: 30px;">
+                    <div
+                        style="font-size: 12px; color: var(--text-muted); font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;">
+                        OPERATION: HEAVY CONSTRUCTION</div>
+                    <h4 style="font-size: 18px; margin-bottom: 15px; color: var(--text-main);">Crane Fleet Re-Hosing
+                        Project</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-muted);"><strong>Problem:</strong>
+                        Preventative maintenance and standard compliance upgrade required for 12 mobile heavy-lift
+                        cranes.</p>
+                    <div
+                        style="border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 14px; color: var(--accent-blue); font-weight: 600;">
+                        Outcome: Executed phased replacement of 400+ meters of multi-spiral hose with full 3.1 material
+                        traceability, zero operational downtime recorded.</div>
+                </div>
+
+                <div style="background: var(--bg-panel); border: 1px solid var(--border-color); padding: 30px;">
+                    <div
+                        style="font-size: 12px; color: var(--text-muted); font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;">
+                        OPERATION: OIL & GAS INFRASTRUCTURE</div>
+                    <h4 style="font-size: 18px; margin-bottom: 15px; color: var(--text-main);">Custom Manifold
+                        Fabrication</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-muted);"><strong>Problem:</strong>
+                        Discontinued OEM parts causing bottleneck for critical extraction pipeline flow control system.
                     </p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-wrench service-icon"></i>
-                    <h4>Tubing Installation</h4>
-                    <p>Professional installation of complete hydraulic and pneumatic tubing systems.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-hammer service-icon"></i>
-                    <h4>Custom Manufacturing</h4>
-                    <p>Tailor-made stainless steel fittings and specialized accessories manufactured to client spec.</p>
+                    <div
+                        style="border-top: 1px solid var(--border-color); padding-top: 15px; font-size: 14px; color: var(--accent-blue); font-weight: 600;">
+                        Outcome: Engineered and machined custom stainless steel flange and block assemblies matching
+                        exact original specifications.</div>
                 </div>
             </div>
         </div>
@@ -877,24 +852,25 @@
                     delivered with comprehensive traceability.</p>
                 <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
                     <div
-                        style="background: var(--bg-panel-light); padding: 20px 30px; border: 1px solid var(--border-color); border-bottom: 3px solid var(--accent-blue); border-radius: 6px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fa-solid fa-file-contract" style="font-size: 28px; color: var(--accent-blue);"></i>
+                        style="background: var(--bg-panel-light); padding: 20px 30px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px;">
                         <div>
                             <div
                                 style="font-family: var(--font-heading); font-size: 18px; color: var(--text-main); font-weight: 700;">
                                 2.1 MATERIAL CERTIFICATE</div>
-                            <div style="font-size: 13px; color: var(--text-muted);">Standard compliance verification
-                            </div>
+                            <div
+                                style="font-size: 13px; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">
+                                Standard Compliance Verification</div>
                         </div>
                     </div>
                     <div
-                        style="background: var(--bg-panel-light); padding: 20px 30px; border: 1px solid var(--border-color); border-bottom: 3px solid var(--accent-blue); border-radius: 6px; display: flex; align-items: center; gap: 15px;">
-                        <i class="fa-solid fa-file-shield" style="font-size: 28px; color: var(--accent-blue);"></i>
+                        style="background: var(--bg-panel-light); padding: 20px 30px; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px;">
                         <div>
                             <div
                                 style="font-family: var(--font-heading); font-size: 18px; color: var(--text-main); font-weight: 700;">
                                 3.1 MATERIAL CERTIFICATE</div>
-                            <div style="font-size: 13px; color: var(--text-muted);">Full product traceability</div>
+                            <div
+                                style="font-size: 13px; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">
+                                Full Product Traceability</div>
                         </div>
                     </div>
                 </div>
@@ -915,29 +891,33 @@
 
             <div class="contact-grid">
                 <div class="contact-info">
-                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 16px;">We welcome your inquiries
-                        and are ready to support your upcoming projects with reliable hydraulic and industrial
-                        solutions.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 16px;">Contact our Ras Al Khor
+                        facility for immediate heavy component dispatch or technical query resolution.</p>
 
                     <div class="contact-item">
-                        <i class="fa-solid fa-user-tie"></i>
                         <div>
-                            <h5>Direct Contact</h5>
-                            <p><strong>Soju:</strong> +971 50 372 3699<br><strong>Kabeer:</strong> +971 55 805 7163</p>
+                            <h5
+                                style="text-transform: uppercase; font-size: 14px; letter-spacing: 1px; color: var(--text-muted);">
+                                Direct Operations</h5>
+                            <p style="font-weight: 600; color: var(--text-main);">+971 50 372 3699 (SOJU)<br>+971 55 805
+                                7163 (KABEER)</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
                         <div>
-                            <h5>Email Inquiries</h5>
-                            <p>smartfluidhydraulic@gmail.com</p>
+                            <h5
+                                style="text-transform: uppercase; font-size: 14px; letter-spacing: 1px; color: var(--text-muted);">
+                                Procurement Email</h5>
+                            <p style="font-weight: 600; color: var(--text-main);">smartfluidhydraulic@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
                         <div>
-                            <h5>Location</h5>
-                            <p>Dubai, United Arab Emirates</p>
+                            <h5
+                                style="text-transform: uppercase; font-size: 14px; letter-spacing: 1px; color: var(--text-muted);">
+                                Facility Location</h5>
+                            <p style="font-weight: 600; color: var(--text-main);">Ras Al Khor Industrial Area 1, Dubai,
+                                UAE</p>
                         </div>
                     </div>
                 </div>
@@ -983,16 +963,14 @@
     <section class="section" style="background-color: var(--accent-blue); padding: 100px 0; text-align: center;">
         <div class="container">
             <h2
-                style="color: #fff; font-size: 42px; margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.2;">
-                READY TO DISCUSS YOUR HYDRAULIC REQUIREMENTS?</h2>
+                style="color: #fff; font-size: 42px; margin-bottom: 25px; line-height: 1.2; border-left: none; padding-left: 0;">
+                24/7 TECHNICAL ASSISTANCE REQUIRED?</h2>
             <p
-                style="color: rgba(255,255,255,0.9); font-size: 20px; font-weight: 400; max-width: 650px; margin: 0 auto 40px auto;">
-                Certified hydraulic and industrial hose solutions with fast UAE delivery and 24/7 technical support.</p>
+                style="color: rgba(255,255,255,0.9); font-size: 18px; font-weight: 400; max-width: 650px; margin: 0 auto 40px auto;">
+                Contact our operations team for immediate dispatch and parts fabrication.</p>
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="#contact" class="btn btn-red" style="background: #fff; color: var(--accent-blue);"><i
-                        class="fa-solid fa-clipboard-list"></i> REQUEST A QUOTE</a>
-                <a href="tel:+971503723699" class="btn btn-outline" style="border-color: #fff; color: #fff;"><i
-                        class="fa-solid fa-phone"></i> CONTACT SALES</a>
+                <a href="tel:+971503723699" class="btn btn-red">CALL FOR DISPATCH</a>
+                <a href="#contact" class="btn btn-outline" style="border-color: #fff; color: #fff;">SUBMIT INQUIRY</a>
             </div>
         </div>
     </section>
