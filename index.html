@@ -42,16 +42,16 @@
 
     <style>
         :root {
-            --bg-dark: #0a0a0c;
-            --bg-panel: #141417;
-            --bg-panel-light: #1f1f24;
-            --accent-blue: #0b3d91;
-            --accent-red: #ff2a2a;
-            --text-main: #e5e5e5;
-            --text-muted: #8b92a5;
+            --bg-dark: #f8f9fc;
+            --bg-panel: #ffffff;
+            --bg-panel-light: #f1f5f9;
+            --accent-blue: #0f4c81;
+            --accent-red: #e3000f;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
             --font-heading: 'Oswald', sans-serif;
             --font-body: 'Inter', sans-serif;
-            --border-color: #2a2a30;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -80,7 +80,7 @@
             font-family: var(--font-heading);
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #fff;
+            color: var(--text-main);
         }
 
         a {
@@ -183,7 +183,7 @@
 
         /* Navbar */
         nav {
-            background: rgba(10, 10, 12, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             border-bottom: 1px solid var(--border-color);
             position: fixed;
             width: 100%;
@@ -295,20 +295,24 @@
             align-items: center;
         }
 
-        /* Services */
+        /* Services & Products */
         .service-card {
             background: var(--bg-panel);
             border: 1px solid var(--border-color);
             padding: 35px;
+            border-radius: 8px;
+            transition: all 0.3s;
         }
 
         .service-card:hover {
-            border-color: #444;
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transform: translateY(-3px);
         }
 
         .service-icon {
             font-size: 32px;
-            color: var(--accent-red);
+            color: var(--accent-blue);
             margin-bottom: 25px;
         }
 
@@ -322,6 +326,47 @@
             color: var(--text-muted);
             font-size: 15px;
             line-height: 1.7;
+        }
+
+        .product-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .product-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .product-card-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .product-card-content h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-card-content p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
         }
 
         .service-card ul {
@@ -391,7 +436,7 @@
             gap: 15px;
             margin-bottom: 15px;
             font-size: 15px;
-            color: #ccc;
+            color: var(--text-muted);
         }
 
         .about-text ul li i {
@@ -410,7 +455,7 @@
         .corporate-box h4 {
             margin-bottom: 25px;
             font-size: 18px;
-            color: #fff;
+            color: var(--text-main);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -440,8 +485,9 @@
         .corporate-value {
             font-family: monospace;
             font-size: 15px;
-            color: #fff;
+            color: var(--text-main);
             text-align: right;
+            font-weight: 600;
         }
 
         /* Contact */
@@ -483,7 +529,7 @@
         .contact-item div h5 {
             font-size: 18px;
             margin-bottom: 5px;
-            color: #fff;
+            color: var(--text-main);
             font-weight: 600;
         }
 
@@ -514,12 +560,13 @@
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            background: var(--bg-dark);
+            background: var(--bg-panel-light);
             border: 1px solid var(--border-color);
             padding: 15px;
-            color: #fff;
+            color: var(--text-main);
             font-family: var(--font-body);
             font-size: 15px;
+            border-radius: 4px;
         }
 
         .contact-form input:focus,
@@ -576,7 +623,7 @@
         }
 
         footer span {
-            color: #fff;
+            color: var(--text-main);
         }
     </style>
 </head>
@@ -677,38 +724,58 @@
             <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 16px;">We maintain ready stock of
                 industrial hoses ranging from ¼” to 16” sizes and a complete range of fluid connectors.</p>
             <div class="grid grid-3">
-                <div class="service-card">
-                    <i class="fa-solid fa-droplet service-icon"></i>
-                    <h4>Hydraulic & Industrial Hoses</h4>
-                    <p>High-performance hoses suitable for high-pressure and heavy-duty applications. Sizes from ¼” to
-                        16”.</p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1627602325946-0b192c7d9a1a?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Hydraulic Hose">
+                    <div class="product-card-content">
+                        <h4>Hydraulic & Industrial Hoses</h4>
+                        <p>High-performance hoses suitable for high-pressure and heavy-duty applications. Sizes from ¼”
+                            to
+                            16”.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-flask service-icon"></i>
-                    <h4>Stainless Steel & PTFE Hoses</h4>
-                    <p>Durable, corrosion and chemical-resistant solutions for critical environments and high-temp
-                        applications.</p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Stainless Steel Hoses">
+                    <div class="product-card-content">
+                        <h4>Stainless Steel & PTFE Hoses</h4>
+                        <p>Durable, corrosion and chemical-resistant solutions for critical environments and high-temp
+                            applications.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-compress service-icon"></i>
-                    <h4>Fittings, Valves & Couplings</h4>
-                    <p>Compression tubes, high-pressure valves, and quick disconnect couplings engineered for safety.
-                    </p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1610433722253-ab91283e382d?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Fittings and Valves">
+                    <div class="product-card-content">
+                        <h4>Fittings, Valves & Couplings</h4>
+                        <p>Compression tubes, high-pressure valves, and quick disconnect couplings engineered for
+                            safety.
+                        </p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-gauge-high service-icon"></i>
-                    <h4>Pressure Accessories</h4>
-                    <p>Accurate pressure gauges and monitoring solutions.</p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Pressure Accessories">
+                    <div class="product-card-content">
+                        <h4>Pressure Accessories</h4>
+                        <p>Accurate pressure gauges and monitoring solutions.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-link service-icon"></i>
-                    <h4>Flanges & Unions</h4>
-                    <p>SAE Flanges, flange blocks, and heavy-duty hammer/tank unions.</p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544837542-a7d187cf8fcb?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Flanges and Unions">
+                    <div class="product-card-content">
+                        <h4>Flanges & Unions</h4>
+                        <p>SAE Flanges, flange blocks, and heavy-duty hammer/tank unions.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-layer-group service-icon"></i>
-                    <h4>Accessories</h4>
-                    <p>Metallic expansion bellows and robust tube clamps (MS & SS).</p>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1620577551000-85f091c53245?q=80&w=800&auto=format&fit=crop"
+                        class="product-card-img" alt="Accessories">
+                    <div class="product-card-content">
+                        <h4>Accessories</h4>
+                        <p>Metallic expansion bellows and robust tube clamps (MS & SS).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -795,15 +862,15 @@
                     delivered with comprehensive traceability.</p>
                 <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
                     <div
-                        style="background: var(--bg-panel); padding: 15px 25px; border: 1px solid var(--accent-red); font-family: var(--font-heading); font-size: 18px; color: #fff; letter-spacing: 1px;">
+                        style="background: var(--bg-panel-light); padding: 15px 25px; border: 1px solid var(--accent-blue); border-radius: 6px; font-family: var(--font-heading); font-size: 18px; color: var(--text-main); letter-spacing: 1px;">
                         2.1 CERTIFICATION</div>
                     <div
-                        style="background: var(--bg-panel); padding: 15px 25px; border: 1px solid var(--accent-red); font-family: var(--font-heading); font-size: 18px; color: #fff; letter-spacing: 1px;">
+                        style="background: var(--bg-panel-light); padding: 15px 25px; border: 1px solid var(--accent-blue); border-radius: 6px; font-family: var(--font-heading); font-size: 18px; color: var(--text-main); letter-spacing: 1px;">
                         3.1 CERTIFICATION</div>
                 </div>
-                <p style="color: #ccc; font-weight: 600;"><i class="fa-solid fa-check"
-                        style="color: var(--accent-red); margin-right: 10px;"></i> Quality and safety remain our highest
-                    priorities.</p>
+                <p style="color: var(--text-main); font-weight: 600;"><i class="fa-solid fa-check"
+                        style="color: var(--accent-blue); margin-right: 10px;"></i> Quality and safety remain our
+                    highest priorities.</p>
             </div>
         </div>
     </section>
