@@ -1,326 +1,977 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Fluid | 24/7 Industrial Mobile Hydraulic Response</title>
-    <meta name="description" content="24/7 Mobile Hydraulic Hose Repair in Dubai. Certified Fluid Power Specialist serving Ras Al Khor, Jebel Ali, Sharjah & Abu Dhabi.">
-    
-    <!-- Schema.org Local SEO Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Smart Fluid Hydraulic Trading LLC",
-      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      "telephone": "+971503723699",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Ras Al Khor Industrial Area 1",
-        "addressLocality": "Dubai",
-        "addressCountry": "AE"
-      },
-      "areaServed": ["Dubai", "Sharjah", "Abu Dhabi", "Jebel Ali"],
-      "priceRange": "$$"
-    }
-    </script>
+    <title>Smart Fluid Hydraulic Trading LLC | Certified Fluid Power Specialist</title>
+    <meta name="description"
+        content="24/7 Mobile Hydraulic Hose Repair in Dubai. Certified Fluid Power Specialist serving Ras Al Khor, Jebel Ali, Sharjah & Abu Dhabi.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Jura:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        industrial: { 900: '#0a0a0c', 800: '#141417', 700: '#1f1f24', metal: '#8b92a5', light: '#f8fafc' },
-                        brand: { red: '#ff2a2a', darkRed: '#cc0000' }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Syncopate', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
-                    }
-                }
+    <style>
+        /* CSS Variables - Industrial Premium Theme */
+        :root {
+            --bg-base: #0a0a0c;
+            --bg-metal: #141417;
+            --bg-metal-light: #1f1f24;
+
+            --accent-blue: #0b3d91;
+            --accent-blue-glow: rgba(11, 61, 145, 0.4);
+
+            --accent-red: #ff2a2a;
+            --accent-red-glow: rgba(255, 42, 42, 0.4);
+
+            --text-main: #f8fafc;
+            --text-metal: #8b92a5;
+
+            --font-heading: 'Syncopate', sans-serif;
+            --font-body: 'Jura', sans-serif;
+
+            --border-metal: 1px solid var(--bg-metal-light);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Essential Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .heading {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Layout Structure */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
-    </script>
-    <style>
-        body { background-color: #0a0a0c; color: #f8fafc; overflow-x: hidden; scroll-behavior: smooth; }
-        .glass-nav { background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .metal-card { background: linear-gradient(145deg, #141417, #0a0a0c); border: 1px solid #1f1f24; transition: all 0.3s ease; }
-        .metal-card:hover { transform: translateY(-5px); border-color: #ff2a2a; box-shadow: 0 10px 30px -10px rgba(255, 42, 42, 0.15); }
-        .text-gradient { background: linear-gradient(to right, #ffffff, #8b92a5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        @keyframes pulse-ring {
-            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+
+        /* Micro-Animations & FX */
+        @keyframes subtlePulse {
+            0% {
+                box-shadow: 0 0 0 0 var(--accent-red-glow);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px transparent;
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 transparent;
+            }
         }
-        .whatsapp-float { animation: pulse-ring 2s infinite; }
+
+        @keyframes scanningLine {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .hover-metal {
+            background: linear-gradient(145deg, var(--bg-metal), var(--bg-base));
+            border: var(--border-metal);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hover-metal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s ease;
+        }
+
+        .hover-metal:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px -10px var(--accent-blue-glow);
+        }
+
+        .hover-metal:hover::before {
+            transform: translateX(100%);
+        }
+
+        /* Buttons & Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-metal-light);
+            border: 1px solid var(--accent-red);
+            padding: 6px 16px;
+            font-family: var(--font-heading);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px var(--accent-red-glow);
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            animation: subtlePulse 2s infinite;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--accent-blue);
+            color: #fff;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 2px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: 0 0 20px var(--accent-blue-glow);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--accent-blue);
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            background: transparent;
+            color: #fff;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 2px;
+            border: 1px solid var(--text-metal);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Specific Components */
+        /* --- Navbar --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo-box {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            color: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue-glow);
+        }
+
+        .nav-title h1 {
+            font-size: 14px;
+            letter-spacing: 4px;
+        }
+
+        .nav-title p {
+            font-size: 9px;
+            color: var(--accent-red);
+            letter-spacing: 3px;
+            font-family: var(--font-body);
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 900px) {
+            .nav-links {
+                display: flex;
+                gap: 40px;
+                font-family: var(--font-heading);
+                font-size: 11px;
+                color: var(--text-metal);
+            }
+
+            .nav-links a:hover {
+                color: #fff;
+            }
+        }
+
+        .nav-cta {
+            background: var(--accent-red);
+            color: #fff;
+            padding: 10px 20px;
+            font-family: var(--font-heading);
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 15px var(--accent-red-glow);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-cta:hover {
+            background: #cc0000;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 200px 0 120px;
+            position: relative;
+            border-bottom: var(--border-metal);
+            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.98)),
+                url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2070&q=80') center/cover fixed;
+        }
+
+        .hero h2 {
+            font-size: clamp(32px, 5vw, 70px);
+            line-height: 1.1;
+            margin: 24px 0;
+            max-width: 900px;
+        }
+
+        .hero h2 span {
+            color: var(--accent-blue);
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-metal);
+            margin-bottom: 40px;
+            max-width: 700px;
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* --- Stats Strip --- */
+        .stats-strip {
+            background: #050505;
+            border-bottom: var(--border-metal);
+            padding: 60px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-family: var(--font-heading);
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            text-shadow: 0 0 15px var(--accent-blue-glow);
+        }
+
+        .stat-title {
+            font-size: 12px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .stat-desc {
+            font-size: 13px;
+            color: var(--text-metal);
+        }
+
+        /* --- Typography Helpers --- */
+        .section-label {
+            color: var(--accent-blue);
+            font-family: var(--font-heading);
+            font-size: 10px;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        /* --- About & Corporate Block --- */
+        .about-text {
+            color: var(--text-metal);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .corporate-card {
+            background: rgba(11, 61, 145, 0.05);
+            border: 1px solid var(--accent-blue);
+            padding: 30px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .corporate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue-glow);
+        }
+
+        .corporate-list {
+            list-style: none;
+        }
+
+        .corporate-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-family: var(--font-body);
+            font-size: 14px;
+        }
+
+        .corporate-list span:first-child {
+            color: var(--text-metal);
+            font-weight: 600;
+        }
+
+        .corporate-list span:last-child {
+            font-family: monospace;
+            color: #fff;
+        }
+
+        .about-image {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(80%);
+            transition: filter 0.5s;
+        }
+
+        .about-image:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* --- Core Capabilities (Services) --- */
+        .service-card {
+            padding: 40px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--text-metal);
+            margin-bottom: 24px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            color: var(--accent-red);
+            transform: scale(1.1);
+        }
+
+        .service-card.priority {
+            border-color: rgba(255, 42, 42, 0.4);
+        }
+
+        .service-card.priority .service-icon {
+            color: var(--accent-red);
+            text-shadow: 0 0 15px var(--accent-red-glow);
+        }
+
+        .service-card h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--text-metal);
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        /* --- Product Matrix --- */
+        .product-grid {
+            border-top: var(--border-metal);
+            border-left: var(--border-metal);
+        }
+
+        .product-item {
+            padding: 40px;
+            border-right: var(--border-metal);
+            border-bottom: var(--border-metal);
+            transition: var(--transition-smooth);
+        }
+
+        .product-item:hover {
+            background: rgba(11, 61, 145, 0.05);
+        }
+
+        .product-item h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .product-item p {
+            font-size: 13px;
+            color: var(--text-metal);
+        }
+
+        /* --- Active Sectors --- */
+        .sectors-grid {
+            text-align: center;
+        }
+
+        .sector-item i {
+            font-size: 40px;
+            color: var(--text-metal);
+            margin-bottom: 16px;
+            transition: 0.3s;
+        }
+
+        .sector-item:hover i {
+            color: var(--accent-blue);
+        }
+
+        .sector-item p {
+            font-family: var(--font-heading);
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        /* --- Contact / Dispatch --- */
+        .contact-section {
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .contact-info {
+            background: var(--bg-metal);
+            border: var(--border-metal);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .contact-row i {
+            color: var(--accent-blue);
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-row p {
+            color: var(--text-metal);
+            font-size: 15px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border: var(--border-metal);
+            padding: 4px;
+            background: var(--bg-metal-light);
+            filter: grayscale(100%) invert(90%) contrast(85%) hue-rotate(180deg);
+        }
+
+        .contact-form {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--bg-metal-light);
+            padding: 15px 0;
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .form-label {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            color: var(--text-metal);
+            font-family: var(--font-heading);
+            font-size: 11px;
+            letter-spacing: 1px;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .form-control:focus~.form-label,
+        .form-control:not(:placeholder-shown)~.form-label {
+            top: -10px;
+            font-size: 9px;
+            color: var(--accent-blue);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            color: #000;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-blue);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent-blue-glow);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: var(--border-metal);
+            font-family: var(--font-heading);
+            font-size: 11px;
+            color: var(--text-metal);
+            letter-spacing: 2px;
+        }
+
+        .footer-tag {
+            font-family: var(--font-body);
+            font-size: 10px;
+            color: #444;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-brand-red selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 border-2 border-brand-red flex items-center justify-center font-heading font-bold text-lg text-brand-red shadow-[0_0_10px_rgba(255,42,42,0.3)]">SF</div>
-                    <div>
-                        <h1 class="font-heading font-bold text-sm tracking-[0.2em] leading-none uppercase">Smart Fluid</h1>
-                        <p class="text-[8px] text-brand-red font-sans font-bold uppercase tracking-[0.2em] mt-1.5">Certified Fluid Power Specialist</p>
-                    </div>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8 text-xs font-heading tracking-[0.1em] text-industrial-metal uppercase">
-                    <a href="#about" class="hover:text-white transition-colors">About</a>
-                    <a href="#services" class="hover:text-white transition-colors">Services</a>
-                    <a href="#certifications" class="hover:text-white transition-colors">Compliance</a>
-                </div>
+<body>
 
-                <a href="tel:+971503723699" class="bg-brand-red text-white px-5 py-2 text-xs font-heading tracking-[0.1em] uppercase hover:bg-brand-darkRed transition-all shadow-[0_0_15px_rgba(255,42,42,0.4)] flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span class="hidden sm:inline">24/7 Dispatch</span>
-                </a>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-content">
+            <div class="nav-brand">
+                <div class="nav-logo-box">SF</div>
+                <div class="nav-title">
+                    <h1>SMART FLUID</h1>
+                    <p>CERTIFIED FLUID POWER SPECIALIST</p>
+                </div>
             </div>
+
+            <div class="nav-links">
+                <a href="#about">CORPORATE INFO</a>
+                <a href="#services">CAPABILITIES</a>
+                <a href="#products">PORTFOLIO</a>
+            </div>
+
+            <a href="tel:+971503723699" class="nav-cta">
+                <i class="fa-solid fa-phone"></i> 24/7 DISPATCH
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-hero-pattern bg-cover bg-center bg-fixed border-b border-industrial-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-red text-white text-[10px] font-heading tracking-widest uppercase mb-6 shadow-[0_0_10px_rgba(255,42,42,0.5)] border border-brand-red">
-                    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                    24/7 Priority Response
-                </div>
-                <h2 class="text-3xl sm:text-5xl lg:text-7xl font-heading font-bold tracking-tighter leading-[1.1] mb-6 text-white uppercase drop-shadow-2xl">
-                    Industrial <span class="text-brand-red">Mobile</span> Hydraulic Response
-                </h2>
-                <p class="text-lg text-industrial-metal mb-10 max-w-2xl leading-relaxed font-light border-l-2 border-brand-red pl-4">
-                    When heavy machinery stops, we deploy. <strong class="text-white font-medium">Certified Fluid Power Specialists</strong> delivering emergency onsite hose repair across UAE industrial zones.
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Emergency Mobile Unit Active
+            </div>
+
+            <h2>
+                INDUSTRIAL <span>HYDRAULIC</span> POWER INFRASTRUCTURE
+            </h2>
+
+            <p>
+                Elite fluid power engineering. Certified high-pressure components and 24/7 emergency mobile breakdown
+                recovery across UAE industrial zones.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">
+                    <i class="fa-solid fa-bolt"></i> DEPLOY RESPONSE UNIT
+                </a>
+                <a href="#services" class="btn-outline">
+                    VIEW CAPABILITIES
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="container grid grid-3">
+            <div class="stat-item">
+                <div class="stat-number">45<span style="font-size:18px;">MIN</span></div>
+                <div class="stat-title heading">AVERAGE RESPONSE</div>
+                <div class="stat-desc">Ras Al Khor & Surrounding Hubs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12K<span style="font-size:18px;">+</span></div>
+                <div class="stat-title heading">ASSEMBLIES DELIVERED</div>
+                <div class="stat-desc">EN 10204 3.1 Certified Operations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-title heading">INDUSTRIAL COVERAGE</div>
+                <div class="stat-desc">Zero Downtime Tolerance</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT & CORPORATE INFO -->
+    <section id="about" class="section">
+        <div class="container grid grid-2">
+            <div>
+                <span class="section-label">STRATEGIC ALIGNMENT</span>
+                <h3 class="section-title">ENGINEERED TO KEEP PRODUCTION MOVING</h3>
+
+                <p class="about-text">
+                    Smart Fluid Hydraulic Trading LLC is positioned at the critical intersection of construction, oil &
+                    gas, and marine engineering. When heavy machinery stops, our certified intervention units deploy
+                    immediately to secure your supply chain and operational continuity.
                 </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <a href="tel:+971503723699" class="bg-brand-red text-white px-8 py-4 text-xs font-heading tracking-widest uppercase hover:bg-brand-darkRed transition-all hover:-translate-y-1 shadow-[0_0_20px_rgba(255,42,42,0.4)] flex items-center gap-3">
-                        Call Dispatch: +971 50 372 3699
-                    </a>
-                    <a href="#contact" class="bg-transparent border border-industrial-700 text-white px-8 py-4 text-xs font-heading tracking-widest uppercase hover:border-white transition-all flex items-center gap-3">
-                        Request Quote
-                    </a>
+                <p class="about-text">
+                    We warehouse and distribute extreme-pressure hoses, robust fittings, and complete hydraulic
+                    architecture components meeting stringent global compliance requirements.
+                </p>
+
+                <!-- Corporate Info Box -->
+                <div class="corporate-card">
+                    <ul class="corporate-list">
+                        <li>
+                            <span>Registered Entity</span>
+                            <span>SMART FLUID HYDRAULIC TRADING</span>
+                        </li>
+                        <li>
+                            <span>Trade License No.</span>
+                            <span>704175</span>
+                        </li>
+                        <li>
+                            <span>Tax Registration (TRN)</span>
+                            <span>100515283800003</span>
+                        </li>
+                        <li>
+                            <span>HQ Location</span>
+                            <span>RAS AL KHOR IND. 1, DUBAI</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-image hover-metal border-metal">
+                <img src="https://images.unsplash.com/photo-1541888087611-e23da45001ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Industrial Pipeline Operations">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" style="background: var(--bg-metal);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-label">OPERATIONAL DIVISIONS</span>
+                <h3 class="section-title">CORE CAPABILITIES</h3>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="service-card hover-metal priority">
+                    <i class="fa-solid fa-truck-fast service-icon"></i>
+                    <h4>24/7 MOBILE HOSE VAN</h4>
+                    <p>Rapid onsite hose fabrication, cutting, and crimping inside fully equipped mobile units. Priority
+                        dispatch for UAE industrial emergencies.</p>
+                </div>
+
+                <div class="service-card hover-metal">
+                    <i class="fa-solid fa-gears service-icon"></i>
+                    <h4>HARDWARE INTEGRATION</h4>
+                    <p>Certified supply of hydraulic hoses (¼”–16”), JIC/BSP/NPT fittings, heavy-duty valves, precision
+                        seals, and high-pressure flanges.</p>
+                </div>
+
+                <div class="service-card hover-metal">
+                    <i class="fa-solid fa-microscope service-icon"></i>
+                    <h4>SYSTEM DIAGNOSTICS</h4>
+                    <p>Advanced fluid circuit troubleshooting, pressure threshold testing, flow rate analysis, and rig
+                        maintenance scheduling.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Active SEO Territories Strip -->
-    <div class="bg-[#050505] py-5 border-b border-industrial-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 text-[10px] font-heading tracking-[0.2em] text-industrial-metal uppercase">
-            <span class="text-brand-red font-bold">Actively Serving:</span>
-            <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
-                <span class="flex items-center gap-2"><i class="fa-solid fa-location-crosshairs opacity-40"></i> Ras Al Khor</span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-location-crosshairs opacity-40"></i> Jebel Ali Base</span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-location-crosshairs opacity-40"></i> Sharjah Ind.</span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-location-crosshairs opacity-40"></i> Abu Dhabi</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Operational Statistics Strip -->
-    <div class="bg-industrial-800 border-b border-industrial-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-industrial-700">
-                <div class="px-4">
-                    <div class="text-5xl font-heading font-bold text-brand-red mb-2 drop-shadow-[0_0_10px_rgba(255,42,42,0.3)]">45<span class="text-2xl">MIN</span></div>
-                    <h3 class="font-heading text-xs tracking-widest uppercase mb-1 text-white">Average Response</h3>
-                    <p class="text-industrial-metal text-xs">Ras Al Khor & Surrounding Hubs</p>
-                </div>
-                <div class="px-4">
-                    <div class="text-5xl font-heading font-bold text-brand-red mb-2 drop-shadow-[0_0_10px_rgba(255,42,42,0.3)]">12k<span class="text-2xl">+</span></div>
-                    <h3 class="font-heading text-xs tracking-widest uppercase mb-1 text-white">Assemblies Delivered</h3>
-                    <p class="text-industrial-metal text-xs">Precision Engineered Under Pressure</p>
-                </div>
-                <div class="px-4">
-                    <div class="text-5xl font-heading font-bold text-brand-red mb-2 drop-shadow-[0_0_10px_rgba(255,42,42,0.3)]">24/7</div>
-                    <h3 class="font-heading text-xs tracking-widest uppercase mb-1 text-white">Industrial Coverage</h3>
-                    <p class="text-industrial-metal text-xs">Zero Downtime Tolerance</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- About & Certification Section -->
-    <section id="about" class="py-24 bg-industrial-900 relative border-b border-industrial-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <!-- PRODUCTS MATRIX -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; margin-bottom: 50px;">
                 <div>
-                    <h5 class="text-brand-red font-heading tracking-widest text-[10px] uppercase mb-4">Strategic Framework</h5>
-                    <h3 class="text-3xl font-heading font-bold uppercase mb-6 text-gradient">Engineered to Keep You Moving</h3>
-                    <p class="text-industrial-metal text-sm leading-relaxed mb-6">
-                        We are an elite industrial response unit delivering heavy-duty hydraulic systems, extreme-pressure hoses, and 24/7 breakdown recovery. 
-                    </p>
-                    <p class="text-industrial-metal text-sm leading-relaxed mb-8">
-                        Operating at the critical intersection of construction, oil & gas, and marine engineering, we ensure massive infrastructure projects never halt due to fluid power failure.
-                    </p>
-                    
-                    <!-- Trusted By mini-strip -->
-                    <div class="mt-8 pt-8 border-t border-industrial-800">
-                        <p class="text-[10px] font-heading uppercase tracking-widest text-industrial-metal mb-4">Trusted By Operators In:</p>
-                        <div class="flex gap-6 text-2xl text-industrial-700">
-                            <i class="fa-solid fa-hard-hat hover:text-white transition-colors" title="Construction"></i>
-                            <i class="fa-solid fa-oil-well hover:text-white transition-colors" title="Energy & Oil"></i>
-                            <i class="fa-solid fa-anchor hover:text-white transition-colors" title="Marine"></i>
-                            <i class="fa-solid fa-truck-moving hover:text-white transition-colors" title="Logistics"></i>
-                        </div>
-                    </div>
+                    <span class="section-label">INVENTORY ARCHITECTURE</span>
+                    <h3 class="section-title">PRODUCT CATEGORIES</h3>
                 </div>
+                <div style="text-align: right;">
+                    <p style="color: var(--text-metal); font-size: 14px;">ISO Compliant Fluid Conveyance Hardware</p>
+                </div>
+            </div>
 
-                <!-- Certification Image Block -->
-                <div id="certifications" class="relative mt-12 lg:mt-0">
-                    <div class="absolute inset-0 border-2 border-industrial-700 translate-x-4 translate-y-4 z-0"></div>
-                    <img src="https://images.unsplash.com/photo-1541888087611-e23da45001ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Heavy Machinery Pipelines" class="relative z-10 w-full h-[400px] object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700">
-                    
-                    <div class="absolute -bottom-10 -left-6 z-20 metal-card p-6 w-[85%] shadow-2xl">
-                        <h4 class="font-heading text-xs tracking-widest uppercase mb-4 text-brand-red border-b border-industrial-700 pb-2">Compliance & Certifications</h4>
-                        <ul class="space-y-3 text-xs text-white font-medium">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> EN 10204 3.1 Material Certified</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> ISO Compliant Assemblies</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-red"></i> High-Pressure Rated Components</li>
-                        </ul>
-                    </div>
+            <div class="grid grid-4 product-grid">
+                <div class="product-item">
+                    <h4>HYDRAULIC HOSES</h4>
+                    <p>High-pressure 2-wire, 4-wire, and 6-wire spiral hoses (EN/SAE spec).</p>
+                </div>
+                <div class="product-item">
+                    <h4>FITTINGS & ADAPTERS</h4>
+                    <p>BSP, NPT, ORFS, metric fittings. SS316 corrosion-resistant variants available.</p>
+                </div>
+                <div class="product-item">
+                    <h4>INDUSTRIAL HOSES</h4>
+                    <p>Suction, discharge, chemical transfer, and marine exhaust bellows.</p>
+                </div>
+                <div class="product-item">
+                    <h4>QUICK COUPLINGS</h4>
+                    <p>Flat-face, poppet, and heavy-duty threaded connectors for machinery.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Division -->
-    <section id="services" class="py-24 bg-industrial-800 border-b border-industrial-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h5 class="text-brand-red font-heading tracking-widest text-[10px] uppercase mb-4">Operational Divisions</h5>
-                <h3 class="text-3xl font-heading font-bold uppercase text-white">Core Capabilities</h3>
+    <!-- SECTORS -->
+    <section class="section" style="border-top: var(--border-metal); border-bottom: var(--border-metal);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h3 class="heading" style="color: var(--text-metal); font-size: 16px;">DRIVING AUTHORITY ACROSS HEAVY
+                    SECTORS</h3>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="metal-card p-8 border-brand-red/50 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-brand-red/10 blur-xl group-hover:bg-brand-red/20 transition-all"></div>
-                    <i class="fa-solid fa-van-utility text-4xl text-brand-red mb-6 drop-shadow-[0_0_10px_rgba(255,42,42,0.5)]"></i>
-                    <h4 class="text-lg font-heading font-bold mb-3 uppercase text-white">Emergency Mobile Van</h4>
-                    <p class="text-industrial-metal text-sm leading-relaxed">
-                        Rapid onsite hose fabrication, crimping, and replacement. Equipped for high-pressure industrial environments.
-                    </p>
+            <div class="grid grid-4 sectors-grid">
+                <div class="sector-item">
+                    <i class="fa-solid fa-building-user"></i>
+                    <p>CONSTRUCTION</p>
                 </div>
-
-                <div class="metal-card p-8">
-                    <i class="fa-solid fa-gears text-4xl text-industrial-metal mb-6"></i>
-                    <h4 class="text-lg font-heading font-bold mb-3 uppercase text-white">Hardware Supply</h4>
-                    <p class="text-industrial-metal text-sm leading-relaxed">
-                        Certified hoses (¼”–16”), JIC/BSP/NPT fittings, heavy-duty valves, precision seals, and accumulators.
-                    </p>
+                <div class="sector-item">
+                    <i class="fa-solid fa-oil-well"></i>
+                    <p>OIL & GAS</p>
                 </div>
-
-                <div class="metal-card p-8">
-                    <i class="fa-solid fa-stethoscope text-4xl text-industrial-metal mb-6"></i>
-                    <h4 class="text-lg font-heading font-bold mb-3 uppercase text-white">System Diagnostics</h4>
-                    <p class="text-industrial-metal text-sm leading-relaxed">
-                        Advanced troubleshooting, pressure testing, fluid analysis, and preventative maintenance for massive rigs.
-                    </p>
+                <div class="sector-item">
+                    <i class="fa-solid fa-anchor"></i>
+                    <p>MARINE OFFSHORE</p>
+                </div>
+                <div class="sector-item">
+                    <i class="fa-solid fa-truck-moving"></i>
+                    <p>LOGISTICS & FLEET</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Dispatch (Netlify Form + Google Maps) -->
-    <section id="contact" class="py-24 bg-industrial-900 border-t-4 border-brand-red relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16">
-                
-                <!-- Info & Map -->
-                <div>
-                    <h3 class="text-3xl font-heading font-bold uppercase text-white mb-8">Dispatch Request HQ</h3>
-                    <div class="space-y-6 text-sm text-industrial-metal bg-industrial-800 p-6 border border-industrial-700 mb-8">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-location-dot text-brand-red text-xl w-6"></i>
-                            <p>Ras Al Khor Industrial Area 1, Dubai, UAE</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-envelope text-brand-red text-xl w-6"></i>
-                            <p>smartfluidhydraulic@gmail.com</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-phone text-brand-red text-xl w-6"></i>
-                            <p class="text-lg text-white font-bold tracking-wider">+971 50 372 3699</p>
-                        </div>
-                    </div>
+    <!-- CONTACT HQ -->
+    <section id="contact" class="section contact-section">
+        <div class="container grid grid-2">
 
-                    <!-- Map -->
-                    <div class="w-full h-64 border border-industrial-700 bg-industrial-800 p-1 relative group">
-                        <div class="absolute inset-0 bg-brand-red/10 animate-pulse pointer-events-none z-10"></div>
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3610.125953046279!2d55.3370327!3d25.1764789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6758b29fceeb%3A0xe5450f75e22588f9!2sRas%20Al%20Khor%20Industrial%20Area%201%20-%20Dubai!5e0!3m2!1sen!2sae!4v1698246011403!5m2!1sen!2sae" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0; filter: grayscale(100%) invert(90%) contrast(85%); mix-blend-mode: luminosity;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
+            <div>
+                <span class="section-label">OPERATIONS CENTER</span>
+                <h3 class="section-title">DISPATCH HQ</h3>
+
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <p>Ras Al Khor Industrial Area 1, Dubai, UAE</p>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>smartfluidhydraulic@gmail.com</p>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p style="color:#fff; font-size:18px; font-weight:700;">+971 50 372 3699</p>
                     </div>
                 </div>
 
-                <!-- Form -->
-                <div class="metal-card p-8 flex flex-col justify-center">
-                    <h4 class="font-heading text-xs tracking-widest uppercase mb-6 text-white text-center">Request Immediate Assistance</h4>
-                    <form name="dispatch-request" method="POST" data-netlify="true" class="space-y-8">
-                        <div class="relative">
-                            <input type="text" name="name" required class="w-full bg-transparent border-b border-industrial-700 py-3 text-white focus:outline-none focus:border-brand-red transition-colors peer placeholder-transparent" placeholder="Company / Rep Name">
-                            <label class="absolute left-0 -top-3.5 text-[10px] font-heading tracking-widest uppercase text-industrial-metal transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-brand-red">Company / Rep Name</label>
-                        </div>
-                        <div class="relative">
-                            <input type="tel" name="phone" required class="w-full bg-transparent border-b border-industrial-700 py-3 text-white focus:outline-none focus:border-brand-red transition-colors peer placeholder-transparent" placeholder="Phone Number">
-                            <label class="absolute left-0 -top-3.5 text-[10px] font-heading tracking-widest uppercase text-industrial-metal transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-brand-red">Direct Contact Number</label>
-                        </div>
-                        <div class="relative">
-                            <textarea name="message" rows="4" required class="w-full bg-transparent border-b border-industrial-700 py-3 text-white focus:outline-none focus:border-brand-red transition-colors peer placeholder-transparent" placeholder="Emergency Details"></textarea>
-                            <label class="absolute left-0 -top-3.5 text-[10px] font-heading tracking-widest uppercase text-industrial-metal transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[10px] peer-focus:text-brand-red">Equipment / Emergency Details</label>
-                        </div>
-                        <button type="submit" class="w-full bg-white text-black py-4 text-xs font-heading font-bold tracking-widest uppercase hover:bg-brand-red hover:text-white transition-all duration-300 mt-4 shadow-lg">
-                            Submit Priority Request <i class="fa-solid fa-bolt ml-2"></i>
-                        </button>
-                    </form>
+                <!-- Map -->
+                <div class="map-container hover-metal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3610.125953046279!2d55.3370327!3d25.1764789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6758b29fceeb%3A0xe5450f75e22588f9!2sRas%20Al%20Khor%20Industrial%20Area%201%20-%20Dubai!5e0!3m2!1sen!2sae!4v1698246011403!5m2!1sen!2sae"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
-
             </div>
+
+            <!-- Form -->
+            <div class="hover-metal contact-form" style="border-top: 4px solid var(--accent-red);">
+                <h4 class="heading" style="margin-bottom: 40px; color: #fff;">initiate PRIORITY REQUEST</h4>
+
+                <form name="dispatch-inquiry" method="POST" data-netlify="true">
+                    <div class="form-group">
+                        <input type="text" name="company" class="form-control" placeholder=" " required>
+                        <label class="form-label">COMPANY / REP NAME</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="form-control" placeholder=" " required>
+                        <label class="form-label">DIRECT CONTACT NUMBER</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder=" " required>
+                        <label class="form-label">CORPORATE EMAIL</label>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 40px;">
+                        <input type="text" name="equipment" class="form-control" placeholder=" " required>
+                        <label class="form-label">EQUIPMENT DETAILS / EMERGENCY LOCATION</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        TRANSMIT REQUEST <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                    </button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 11px; color: var(--text-metal);">
+                        Transmission secured via Netlify Infrastructure</p>
+                </form>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-8 text-center border-t border-industrial-800 text-xs font-heading tracking-widest text-industrial-metal uppercase">
-        <p>&copy; 2024 Smart Fluid | Certified Fluid Power Specialist.</p>
-        <p class="mt-2 text-[8px] text-industrial-700">Precision Engineered in Dubai, UAE</p>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SMART FLUID HYDRAULIC TRADING LLC.</p>
+            <p class="footer-tag">DUBAI | UNITED ARAB EMIRATES | INDUSTRIAL RESPONSE AUTHORITY</p>
+        </div>
     </footer>
 
-    <!-- FAB: WhatsApp -->
-    <a href="https://wa.me/971503723699" target="_blank" class="fixed bottom-6 right-6 z-50 whatsapp-float bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Mobile Sticky Call -->
-    <div class="fixed bottom-0 left-0 w-full z-40 bg-brand-red text-white py-4 text-center sm:hidden font-heading text-[10px] tracking-[0.2em] uppercase font-bold shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
-        <a href="tel:+971503723699" class="block w-full flex items-center justify-center gap-2">
-            <i class="fa-solid fa-phone animate-pulse"></i> Deploy Mobile Response
-        </a>
-    </div>
-
 </body>
+
 </html>
